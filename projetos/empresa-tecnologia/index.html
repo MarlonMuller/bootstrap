@@ -11,6 +11,64 @@
 </head>
 
 <body>
+    <!-- Modal -->
+    <div class="modal fade" id="orcamentoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Solicitar orçamento</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-12">
+                            <label class="form-label">Nome</label>
+                            <input type="text" class="form-control" placeholder="Nome" required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Email" required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Instagram</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                                <input type="text" class="form-control" placeholder="Instagram" arial-label="Instagram"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Ramo do seu negócio</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Plano de interesse</label>
+                            <select class="form-select" required>
+                                <option selected disabled>Escolha o plano...</option>
+                                <option>Plano Platinum</option>
+                                <option>Plano Gold</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Qual o porte da sua empresa</label>
+                            <select class="form-select" required>
+                                <option selected disabled>Porte de empresa...</option>
+                                <option>Pequena empresa</option>
+                                <option>Média empresa</option>
+                                <option>Grande empresa</option>
+                                <option>Multinacional empresa</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
     <header>
         <nav class="navbar navbar-expand-lg bg-dark data-bs-theme py-4">
             <div class="container">
@@ -20,36 +78,35 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse " id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
+                            <a class="nav-link active text-white" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Etapas</a>
+                            <a class="nav-link text-white" href="#steps">Etapas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Menu 3</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Menu 4</a>
+                            <a class="nav-link text-white" href="#benefits">Benefícios</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Serviços
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Planos
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#plans">Plano Platinum</a></li>
+                                <li><a class="dropdown-item" href="#plans">Plano Gold</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-primary" href="#">Contato</a>
+                            <a class="nav-link text-white" href="#projects">Projetos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#faq">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#orcamentoModal">Solicitar orçamento</a>
                         </li>
                     </ul>
                 </div>
@@ -61,7 +118,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-6 d-flex flex-column justify-content-center">
-                    <h1 class="fw-bold">A melhor solução para a sua empresa</h1>
+                    <h1 class="fw-bold mt-3">A melhor solução para a sua empresa</h1>
                     <p>Nosso time desenvolverá a solução que você precisa para fazer o seu negócio evoluir</p>
                     <button type="button" class="btn btn-primary">Conheça mais</button>
                 </div>
@@ -346,42 +403,120 @@
             </div>
         </div>
     </section>
-    <section id="project" class="bg-dark py-4" data-bs-theme="dark">
+    <section id="projects" class="bg-dark py-4" data-bs-theme="dark">
         <div class="container">
             <div class="row">
                 <h1 class="text-center text-light">Projetos</h1>
                 <h2 class="text-center fs-4 text-light">Veja soluções que ja entregamos</h2>
             </div>
             <div class="row">
-                <div class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center my-4">
-                    <img src="assets/project-1.png" alt="Projeto 1 Code Start" class="d-block project-img"/>
+                <div
+                    class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center my-4">
+                    <img src="assets/project-1.png" alt="Projeto 1 Code Start" class="d-block project-img" />
                     <p class="text-light border-bottom mt-3 pb-1">Projeto 1 para a empresa X</p>
                 </div>
-                <div class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center my-4">
-                    <img src="assets/project-2.png" alt="Projeto 2 Code Start" class="d-block project-img"/>
+                <div
+                    class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center my-4">
+                    <img src="assets/project-2.png" alt="Projeto 2 Code Start" class="d-block project-img" />
                     <p class="text-light border-bottom mt-3 pb-1">Projeto 2 para a empresa X</p>
                 </div>
-                <div class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center my-4">
-                    <img src="assets/project-3.png" alt="Projeto 3 Code Start" class="d-block project-img"/>
+                <div
+                    class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center my-4">
+                    <img src="assets/project-3.png" alt="Projeto 3 Code Start" class="d-block project-img" />
                     <p class="text-light border-bottom mt-3 pb-1">Projeto 3 para a empresa X</p>
                 </div>
-                <div class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center my-4">
-                    <img src="assets/project-1.png" alt="Projeto 1 Code Start" class="d-block project-img"/>
+                <div
+                    class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center my-4">
+                    <img src="assets/project-1.png" alt="Projeto 1 Code Start" class="d-block project-img" />
                     <p class="text-light border-bottom mt-3 pb-1">Projeto 1 para a empresa X</p>
                 </div>
-                <div class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center my-4">
-                    <img src="assets/project-2.png" alt="Projeto 2 Code Start" class="d-block project-img"/>
+                <div
+                    class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center my-4">
+                    <img src="assets/project-2.png" alt="Projeto 2 Code Start" class="d-block project-img" />
                     <p class="text-light border-bottom mt-3 pb-1">Projeto 2 para a empresa X</p>
                 </div>
-                <div class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center my-4">
-                    <img src="assets/project-3.png" alt="Projeto 3 Code Start" class="d-block project-img"/>
+                <div
+                    class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center my-4">
+                    <img src="assets/project-3.png" alt="Projeto 3 Code Start" class="d-block project-img" />
                     <p class="text-light border-bottom mt-3 pb-1">Projeto 3 para a empresa X</p>
                 </div>
             </div>
         </div>
     </section>
-
-
+    <section id="contact" class="my-4">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center text-primary">Entre em contato</h1>
+                <h2 class="text-center fs-4 text-secondary">Fale conosco</h2>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <form class="row g-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Nome</label>
+                            <input type="text" class="form-control" placeholder="Nome" required />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Email" required />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Instagram</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                                <input type="text" class="form-control" placeholder="Instagram" arial-label="Instagram"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Ramo do seu negócio</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Plano de interesse</label>
+                            <select class="form-select" required>
+                                <option selected disabled>Escolha o plano...</option>
+                                <option>Plano Platinum</option>
+                                <option>Plano Gold</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Qual o porte da sua empresa</label>
+                            <select class="form-select" required>
+                                <option selected disabled>Porte de empresa...</option>
+                                <option>Pequena empresa</option>
+                                <option>Média empresa</option>
+                                <option>Grande empresa</option>
+                                <option>Multinacional empresa</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 d-flex justify-content-between my-4 flex-column flex-md-row">
+                    <p><span class="fw-bold me-2">Endereço:</span> Rua X, número X, cidade X</p>
+                    <p><span class="fw-bold me-2">Telefone:</span> (xx) xxxx - xxxx</p>
+                    <p><span class="fw-bold me-2">Email:</span> contato@icodestart.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark py-4 mt-4">
+        <div class="container">
+            <nav>
+                <ul class="d-flex justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                    <li class="nav-item"><a href="#steps" class="nav-link px-2 text-secondary">Etapas</a></li>
+                    <li class="nav-item"><a href="#benefits" class="nav-link px-2 text-secondary">Benefícios</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link px-2 text-secondary">Projetos</a></li>
+                    <li class="nav-item"><a href="#faq" class="nav-link px-2 text-secondary">FAQ</a></li>
+                </ul>
+            </nav>
+            <p class="text-center text-secondary">&copy; 2025 Code Start, Inc</p>
+        </div>
+    </footer>
 
 
 
